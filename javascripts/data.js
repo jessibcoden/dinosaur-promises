@@ -98,23 +98,42 @@ var thirdDinoJSON = function() {
 // };
 
 
+// PROMISE - the correct way to be used MOST OF THE TIME when solving two or less promises
+
+// var dinoGetter = function(){
+// 	firstDinoJSON().then(function(results) {
+// 		results.forEach(function(dino){
+// 			dinosaurs.push(dino);
+// 		});
+// 		return secondDinoJSON();
+// 	}).then(function(results2){
+// 		results2.forEach(function(dino){
+// 			dinosaurs.push(dino);
+// 		});	
+// 		return thirdDinoJSON();	
+// 	}).then(function(results3){
+// 		results3.forEach(function(dino){
+// 			dinosaurs.push(dino);
+// 		});
+// 		console.log("dinosaurs", dinosaurs);
+// 		makeDinos();
+// 	});
+// };
+
+
+// PROMISE - this is a rare case - 2 or more promises that are the same
+
 var dinoGetter = function(){
-	firstDinoJSON().then(function(results) {
-		results.forEach(function(dino){
-			dinosaurs.push(dino);
+	Promise.all([firstDinoJSON(), secondDinoJSON(), thirdDinoJSON()]).then(function(results){
+		console.log("results from promise.all", results);
+		results.forEach(function(result){
+			result.forEach(function(dino){
+				dinosaurs.push(dino);
+			});
 		});
-		return secondDinoJSON();
-	}).then(function(results2){
-		results2.forEach(function(dino){
-			dinosaurs.push(dino);
-		});	
-		return thirdDinoJSON();	
-	}).then(function(results3){
-		results3.forEach(function(dino){
-			dinosaurs.push(dino);
-		});
-		console.log("dinosaurs", dinosaurs);
 		makeDinos();
+	}).catch(function(error){
+		console.log("error from Promise.all", error);
 	});
 };
 
