@@ -1,6 +1,6 @@
 "use strict";
 
-let data = require("./data.js");
+const data = require("./data.js");
 
 $(document).ready(function() {
 	data.initializer();

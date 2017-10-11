@@ -8,9 +8,9 @@
 
 // This is extremely useful for async success/failure, because you're less interested in the exact time something became available, and more interested in reacting to the outcome.
 
-var dom = require("./dom.js");
+const dom = require("./dom.js");
 
-var dinosaurs = [];
+let dinosaurs = [];
 
 // THE OLD WAY - aka PYRAMID OF DOOM! :
 // let dinoGetter = () => {
@@ -40,34 +40,34 @@ var dinosaurs = [];
 
 
 
-var firstDinoJSON = function() {
-	return new Promise(function(resolve, reject) {
-		$.ajax('./db/dinosaurs.json').done(function(data1) {
+const firstDinoJSON = () => {
+	return new Promise(resolve, reject) {
+		$.ajax('./db/dinosaurs.json').done(data1) {
 			resolve(data1.dinosaurs1);
-		}).fail(function(error1) {
+		}.fail(error1) {
 			reject(error1);
-		});
-	});
+		};
+	};
 };
 	
-var secondDinoJSON = function() {
-	return new Promise(function(resolve, reject) {
-		$.ajax('./db/dinosaurs2.json').done(function(data2) {
+const secondDinoJSON = () => {
+	return new Promise(resolve, reject) {
+		$.ajax('./db/dinosaurs2.json').done(data2) {
 			resolve(data2.dinosaurs2);
-		}).fail(function(error2) {
+		}.fail(error2) {
 			reject(error2);
-		});
-	});
+		};
+	};
 };
 
-var thirdDinoJSON = function() {
-	return new Promise(function(resolve, reject) {
-		$.ajax('./db/dinosaurs3.json').done(function(data3) {
+const thirdDinoJSON = () => {
+	return new Promise(resolve, reject) {
+		$.ajax('./db/dinosaurs3.json').done(data3) {
 			resolve(data3.dinosaurs3);
-		}).fail(function(error3) {
+		}.fail(error3) {
 			reject(error3);
-		});
-	});
+		};
+	};
 };
 
 // PROMISE WORKS - promise pyramid of doom!
@@ -123,32 +123,32 @@ var thirdDinoJSON = function() {
 
 // PROMISE - this is a rare case - 2 or more promises that are the same
 
-var dinoGetter = function(){
-	Promise.all([firstDinoJSON(), secondDinoJSON(), thirdDinoJSON()]).then(function(results){
+const dinoGetter = () => {
+	Promise.all([firstDinoJSON(), secondDinoJSON(), thirdDinoJSON()]).then(results){
 		console.log("results from promise.all", results);
-		results.forEach(function(result){
-			result.forEach(function(dino){
+		results.forEach(result){
+			result.forEach(dino){
 				dinosaurs.push(dino);
-			});
-		});
+			};
+		};
 		makeDinos();
-	}).catch(function(error){
+	}.catch(error){
 		console.log("error from Promise.all", error);
-	});
+	};
 };
 
-var makeDinos = function(){
-	dinosaurs.forEach(function(dino){
+const makeDinos = () => {
+	dinosaurs.forEach(dino){
 		dom(dino);
-	});
+	};
 };
 
 
-var initializer = function(){
+const initializer = () => {
 	dinoGetter();
 };
 
-var getDinosaurs = function(){
+const getDinosaurs = () => {
 	return dinosaurs;
 };
 
