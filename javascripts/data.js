@@ -70,6 +70,16 @@ var thirdDinoJSON = function() {
 	});
 };
 
+const allTheCats = () => {
+	return new Promise((resolve, reject) => {
+		$.ajax('./db/cats.json').done((catData) => {
+			resolve(catData.cats);
+		}).fail((error) => {
+			reject(error);
+		});
+	});
+};
+
 // PROMISE WORKS - promise pyramid of doom!
 
 // var dinoGetter = function() {
@@ -123,19 +133,42 @@ var thirdDinoJSON = function() {
 
 // PROMISE - this is a rare case - 2 or more promises that are the same
 
-var dinoGetter = function(){
-	Promise.all([firstDinoJSON(), secondDinoJSON(), thirdDinoJSON()]).then(function(results){
-		console.log("results from promise.all", results);
-		results.forEach(function(result){
-			result.forEach(function(dino){
-				dinosaurs.push(dino);
+const dinoGetter = () => {
+	Promise.all([firstDinoJSON(), secondDinoJSON(), thirdDinoJSON()]).then((results) => {
+		allTheCats().then((cats) =>{
+			results.forEach((result) => {
+				result.forEach((dino) => {
+					dino.snacks = [];
+					dino.catIds.forEach((catId) =>{
+						cats.forEach((cat) => {
+							if(cat.id === catId){
+								dino.snacks.push(cat);
+							}
+						});
+					});
+					dinosaurs.push(dino);
+				});
 			});
+			makeDinos();
 		});
-		makeDinos();
-	}).catch(function(error){
+	}).catch((error) => {
 		console.log("error from Promise.all", error);
 	});
 };
+
+// var dinoGetter = function(){
+// 	Promise.all([firstDinoJSON(), secondDinoJSON(), thirdDinoJSON()]).then(function(results){
+// 		console.log("results from promise.all", results);
+// 		results.forEach(function(result){
+// 			result.forEach(function(dino){
+// 				dinosaurs.push(dino);
+// 			});
+// 		});
+// 		makeDinos();
+// 	}).catch(function(error){
+// 		console.log("error from Promise.all", error);
+// 	});
+// };
 
 var makeDinos = function(){
 	dinosaurs.forEach(function(dino){

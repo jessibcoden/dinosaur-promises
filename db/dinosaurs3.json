@@ -10,7 +10,7 @@
     "bio": "Ankylosaurus is a genus of armored dinosaur.",
     "img": "imgs/ankylosaurus.png",
     "info": "Herbivore",
-    "catIds":[]
+    "catIds":[7, 14]
   }, {
     "type": "Archaeopteryx",
     "img": "imgs/archaeopteryx.png",
