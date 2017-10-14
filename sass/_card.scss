@@ -1,0 +1,44 @@
+@import 'variables';
+@import 'truncate';
+
+
+.card {
+	transition: box-shadow 10s;
+	width: 30%;
+	margin: 1%;
+	box-shadow: $box-shadow;
+	background-color: $neutral-color;
+	color: $dark-text-color;
+	text-align: center;
+
+	.card-description {
+		@include truncate(100%);
+	}
+
+	.card-img {
+		position: relative;
+
+		img {
+			display: block;
+			border-radius: 2px 2px 0 0;
+			position: relative;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			width: 100%;
+		}
+	}
+}
+
+.card-bad {
+	@extend .card;
+	background-color: $bad-color;
+	color: $light-text-color;
+}
+
+.card-good {
+	@extend .card;
+	background-color: $good-color;
+	color: $light-text-color;
+}

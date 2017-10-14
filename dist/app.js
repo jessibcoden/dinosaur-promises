@@ -71,6 +71,16 @@ var thirdDinoJSON = function() {
 	});
 };
 
+const allTheCats = () => {
+	return new Promise((resolve, reject) => {
+		$.ajax('./db/cats.json').done((catData) => {
+			resolve(catData.cats);
+		}).fail((error) => {
+			reject(error);
+		});
+	});
+};
+
 // PROMISE WORKS - promise pyramid of doom!
 
 // var dinoGetter = function() {
@@ -124,19 +134,42 @@ var thirdDinoJSON = function() {
 
 // PROMISE - this is a rare case - 2 or more promises that are the same
 
-var dinoGetter = function(){
-	Promise.all([firstDinoJSON(), secondDinoJSON(), thirdDinoJSON()]).then(function(results){
-		console.log("results from promise.all", results);
-		results.forEach(function(result){
-			result.forEach(function(dino){
-				dinosaurs.push(dino);
+const dinoGetter = () => {
+	Promise.all([firstDinoJSON(), secondDinoJSON(), thirdDinoJSON()]).then((results) => {
+		allTheCats().then((cats) =>{
+			results.forEach((result) => {
+				result.forEach((dino) => {
+					dino.snacks = [];
+					dino.catIds.forEach((catId) =>{
+						cats.forEach((cat) => {
+							if(cat.id === catId){
+								dino.snacks.push(cat);
+							}
+						});
+					});
+					dinosaurs.push(dino);
+				});
 			});
+			makeDinos();
 		});
-		makeDinos();
-	}).catch(function(error){
+	}).catch((error) => {
 		console.log("error from Promise.all", error);
 	});
 };
+
+// var dinoGetter = function(){
+// 	Promise.all([firstDinoJSON(), secondDinoJSON(), thirdDinoJSON()]).then(function(results){
+// 		console.log("results from promise.all", results);
+// 		results.forEach(function(result){
+// 			result.forEach(function(dino){
+// 				dinosaurs.push(dino);
+// 			});
+// 		});
+// 		makeDinos();
+// 	}).catch(function(error){
+// 		console.log("error from Promise.all", error);
+// 	});
+// };
 
 var makeDinos = function(){
 	dinosaurs.forEach(function(dino){
@@ -157,21 +190,38 @@ module.exports = {initializer: initializer, getDinosaurs: getDinosaurs};
 },{"./dom.js":2}],2:[function(require,module,exports){
 "use strict";
 
-
 let outputDiv = $('#dinosaur');
 
 const domString = (dinosaur) => {
 	let dinoString = '';
 	// for(let i = 0; i < dinosaur.length; i++) {
-		dinoString += `<div>
+		dinoString += `<div class=${dinosaur.info === 'Carnivore' ? 'card-bad' : 'card-good'}>
 						 <h1>${dinosaur.type}</h1>
-					   </div>`;
+						 <h4>${dinosaur.bio}</h4>`;
+		if (dinosaur.info === 'Carnivore'){
+			dinoString += `<h4>Has some tasty snacks.</h4>`;
+		} else {
+			dinoString += `<h4>Has some furry friends.</h4>`;
+		}
+		dinoString += `<div class="card-holder">`;
+		dinosaur.snacks.forEach((cat) => {
+			dinoString += `<div class="card">
+						   <h5>${cat.name}</h5>
+							   <div class="card-img">
+							   	<img src=${cat.imageUrl}>
+							   </div>
+						   <p class="card-description">${cat.specialSkill}</p>
+						   </div>`;
+		});
+		dinoString += 	`</div>`;
+		dinoString +=  `</div>`;
 	// };
 
 	printToDom(dinoString);
 };
 
 const printToDom = (strang) => {
+	console.log("strang", strang);
 	outputDiv.append(strang);
 };
 
@@ -179,7 +229,7 @@ module.exports = domString;
 },{}],3:[function(require,module,exports){
 "use strict";
 
-let data = require("./data.js");
+const data = require("./data.js");
 
 $(document).ready(function() {
 	data.initializer();
