@@ -1,0 +1,243 @@
+{
+  "cats": [{
+      "id": 0,
+      "name": "Bubba",
+      "color": "Green",
+      "specialSkill": "Expertly quotes and recognizes dialogue from early seasons of The Simpsons.",
+      "numberOfToes": 14,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 1,
+      "name": "Peanut",
+      "color": "Yellow",
+      "specialSkill": "Doesn't get weirded out by the word moist.",
+      "numberOfToes": 20,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 2,
+      "name": "Sam",
+      "color": "Grey",
+      "specialSkill": "Will loan you books without freaking out if you have them for a while.",
+      "numberOfToes": 15,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 3,
+      "name": "Boo",
+      "color": "Orange",
+      "specialSkill": "Proficient in air guitar",
+      "numberOfToes": 14,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 4,
+      "name": "Cuddles",
+      "color": "Yellow",
+      "specialSkill": "Expertly quotes and recognizes dialogue from early seasons of The Simpsons.",
+      "numberOfToes": 2,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 5,
+      "name": "Garfield",
+      "color": "Black",
+      "specialSkill": "Dances when he has to.",
+      "numberOfToes": 11,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 6,
+      "name": "Princess",
+      "color": "Red",
+      "specialSkill": "Will pet your cat even though he does not like your cat.",
+      "numberOfToes": 19,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 7,
+      "name": "Annie",
+      "color": "Orange",
+      "specialSkill": "Gives hugs with appropriate pressure and for the right length of time.",
+      "numberOfToes": 3,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 8,
+      "name": "Cali",
+      "color": "Yellow",
+      "specialSkill": "Is totally laid back if you spell his name wrong.",
+      "numberOfToes": 6,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 9,
+      "name": "Molly",
+      "color": "Purple",
+      "specialSkill": "Gives sincere apologies.",
+      "numberOfToes": 14,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 10,
+      "name": "Abby",
+      "color": "Black",
+      "specialSkill": "Does not freak out if you haven't seen his favorite movie (The Big Lebowski).",
+      "numberOfToes": 12,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 11,
+      "name": "Mittens",
+      "color": "Red",
+      "specialSkill": "Showers regularly.",
+      "numberOfToes": 20,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 12,
+      "name": "Milo",
+      "color": "Purple",
+      "specialSkill": "Participates in karaoke but does not force others to go out to karaoke.",
+      "numberOfToes": 0,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 13,
+      "name": "Kiki",
+      "color": "Grey",
+      "specialSkill": "Gives thoughtful and creative birthday presents.",
+      "numberOfToes": 9,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 14,
+      "name": "Princess",
+      "color": "Purple",
+      "specialSkill": "Will pet your cat even though he does not like your cat.",
+      "numberOfToes": 9,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 15,
+      "name": "Pepper",
+      "color": "Poop-Colored",
+      "specialSkill": "Not too shabby at spelling.",
+      "numberOfToes": 18,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 16,
+      "name": "Max",
+      "color": "Brown",
+      "specialSkill": "Gives hugs with appropriate pressure and for the right length of time.",
+      "numberOfToes": 6,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 17,
+      "name": "Gracie",
+      "color": "Yellow",
+      "specialSkill": "Will pet your cat even though he does not like your cat.",
+      "numberOfToes": 15,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 18,
+      "name": "Leo",
+      "color": "Brown",
+      "specialSkill": "Expertly quotes and recognizes dialogue from early seasons of The Simpsons.",
+      "numberOfToes": 13,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 19,
+      "name": "Shadow",
+      "color": "Red",
+      "specialSkill": "Not too shabby at spelling.",
+      "numberOfToes": 15,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 20,
+      "name": "Bailey",
+      "color": "Blue",
+      "specialSkill": "Will loan you books without freaking out if you have them for a while.",
+      "numberOfToes": 15,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 21,
+      "name": "Daisy",
+      "color": "Red",
+      "specialSkill": "Gives hugs with appropriate pressure and for the right length of time.",
+      "numberOfToes": 1,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 22,
+      "name": "Pepper",
+      "color": "Purple",
+      "specialSkill": "Dances when he has to.",
+      "numberOfToes": 12,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 23,
+      "name": "Boots",
+      "color": "Purple",
+      "specialSkill": "Dances when he has to.",
+      "numberOfToes": 9,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 24,
+      "name": "Zoey",
+      "color": "Purple",
+      "specialSkill": "Gives sincere apologies.",
+      "numberOfToes": 11,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 25,
+      "name": "Lucy",
+      "color": "Green",
+      "specialSkill": "Gives compliments when compliments are due.",
+      "numberOfToes": 7,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 26,
+      "name": "Dusty",
+      "color": "Red",
+      "specialSkill": "Will not make a scene when your grandmother says something mildly anti-Semitic.",
+      "numberOfToes": 5,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 27,
+      "name": "Milo",
+      "color": "Blue",
+      "specialSkill": "Takes the morning shift driving on road trips.",
+      "numberOfToes": 17,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 28,
+      "name": "George",
+      "color": "Blue",
+      "specialSkill": "Burps minimally.",
+      "numberOfToes": 18,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    },
+    {
+      "id": 29,
+      "name": "Shadow",
+      "color": "Red",
+      "specialSkill": "Gives thoughtful and creative birthday presents.",
+      "numberOfToes": 12,
+      "imageUrl": "https://media2.giphy.com/media/vFKqnCdLPNOKc/200.gif?fingerprint=e1bb72ff59b3da906f4b517232152ae5"
+    }
+  ]
+}
